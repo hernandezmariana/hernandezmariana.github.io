@@ -1,1 +1,262 @@
-"Hello World" 
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portafolio Interactivo</title>
+    <link rel="stylesheet" href="static/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav id="navbar">
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#sobre-mi">Sobre Mí</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <!-- Nombre con tipografía más discreta -->
+            <h1 class="nombre">Mariana Hernández</h1>
+            
+            <!-- Subtítulo profesional -->
+            <p class="subtitulo">Desarrolladora Full Stack | Estudiante de Ingeniería</p>
+            
+            <!-- Información de contacto compacta -->
+            <div class="info-contacto">
+                <span class="ubicacion">📍 Córdoba, Argentina</span>
+                <span class="email">✉️ mariana.hernandez@email.com</span>
+            </div>
+            
+            <!-- Botón discreto -->
+            <a href="#proyectos" class="btn">Ver mis proyectos</a>
+        </div>
+    </section>
+
+    <section id="sobre-mi" class="section">
+        <h2>Sobre Mí</h2>
+        <div class="sobre-mi-content">
+            <div class="sobre-mi-text">
+                <p>Aquí puedes escribir una breve descripción sobre ti, tus intereses y tu enfoque profesional.</p>
+                <div class="acordeon">
+                    <button class="acordeon-btn">Más sobre mí</button>
+                    <div class="acordeon-content">
+                        <p>Información adicional que se mostrará al hacer clic.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="sobre-mi-img">
+                <img src="static/YO.jpg" alt="Tu foto de perfil">
+            </div>
+        </div>
+    </section>
+
+    <section id="proyectos" class="section">
+        <h2>Mis Proyectos</h2>
+        <div class="filtros">
+            <button class="filtro-btn active" data-filter="todos">Todos</button>
+            <button class="filtro-btn" data-filter="web">Web</button>
+            <button class="filtro-btn" data-filter="python">Python</button>
+            <button class="filtro-btn" data-filter="otros">Otros</button>
+        </div>
+        <div class="proyectos-container" id="proyectos-container">
+            <!-- Los proyectos se cargarán dinámicamente con JavaScript -->
+        </div>
+    </section>
+
+    <section id="habilidades" class="section">
+        <h2>Habilidades</h2>
+        <div class="habilidades-container">
+            <!-- Las habilidades se cargarán dinámicamente -->
+        </div>
+    </section>
+
+    <section id="formacion" class="section">
+        <h2>Formación Académica</h2>
+        
+        <div class="timeline">
+            <!-- Educación formal -->
+            <div class="timeline-item">
+                <div class="timeline-date">Presente</div>
+                <div class="timeline-content">
+                    <h3>Estudiante de Ingeniería en Computación</h3>
+                    <p>Universidad Nacional del Sur</p>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-date">2015 - 2019</div>
+                <div class="timeline-content">
+                    <h3>Bachiller en [Tu Especialidad]</h3>
+                    <p>[Nombre del Colegio/Instituto]</p>
+                </div>
+            </div>
+        </div>
+        
+        <h3 class="cursos-title">Cursos y Certificaciones</h3>
+        
+        <div class="cursos-container">
+            <!-- Cursos técnicos -->
+            <div class="curso-card">
+                <div class="curso-icon">
+                    <i class="fas fa-laptop-code"></i>
+                </div>
+                <div class="curso-info">
+                    <h4>Desarrollo Web Full Stack</h4>
+                    <p>[Plataforma: Udemy/Coursera/etc.] - 2023</p>
+                    <p>120 horas - Certificado disponible</p>
+                </div>
+            </div>
+            
+            <!-- Cursos de inglés -->
+            <div class="curso-card">
+                <div class="curso-icon">
+                    <i class="fas fa-language"></i>
+                </div>
+                <div class="curso-info">
+                    <h4>Inglés Avanzado</h4>
+                    <p>[Instituto: Cultural Inglesa/EF/etc.] - 2022</p>
+                    <p>Nivel C1 - 400 horas</p>
+                </div>
+            </div>
+            
+            <!-- Añade más cursos según necesites -->
+        </div>
+    </section>
+<!-- SECCIÓN HABILIDADES TÉCNICAS -->
+<section id="habilidades">
+    <h2>Habilidades Técnicas</h2>
+  
+    <!-- CATEGORÍA: Tecnologías y Frameworks -->
+    <div class="skill-category">
+      <h3>Tecnologías y Frameworks</h3>
+  
+      <!-- Tarjeta principal de Desarrollo Web -->
+      <div class="skill-item">
+        <div class="skill-header">
+          <img src="/static/images/web-icon.png" alt="Web" class="skill-icon">
+          <h3>Desarrollo Web</h3>
+        </div>
+        
+        <!-- Sub-habilidades agrupadas -->
+        <div class="skill-subitems">
+          
+          <!-- PHP -->
+          <div class="subskill">
+            <h4>PHP</h4>
+            <ul>
+              <li><strong>Tienda Web funcional</strong> con carrito de compras</li>
+              <li>Arquitectura <strong>MVC</strong> personalizada</li>
+              <li>Conexión con <strong>MySQL</strong> para persistencia de datos</li>
+            </ul>
+          </div>
+          
+          <!-- HTML/CSS -->
+          <div class="subskill">
+            <h4>HTML5/CSS3</h4>
+            <ul>
+              <li>Maquetación <strong>responsive</strong> (mobile-first)</li>
+              <li>Implementación de <strong>animaciones CSS</strong></li>
+              <li>Validación W3C y <strong>accesibilidad</strong> (ARIA)</li>
+            </ul>
+          </div>
+          
+          <!-- Bootstrap -->
+          <div class="subskill">
+            <h4>Bootstrap 5</h4>
+            <ul>
+              <li>Desarrollo rápido con <strong>grid system</strong></li>
+              <li>Customización de <strong>variables SASS</strong></li>
+              <li>Integración con <strong>JavaScript</strong> para componentes dinámicos</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- CATEGORÍA: Herramientas y Otros -->
+    <div class="skill-category">
+      <h3>Herramientas y Otros</h3>
+      
+      <!-- Git -->
+      <div class="skill-item">
+        <div class="skill-header">
+          <img src="/static/images/git-icon.png" alt="Git" class="skill-icon">
+          <h3>Control de Versiones</h3>
+        </div>
+        <ul class="skill-details">
+          <li><strong>Git Flow</strong> para trabajo en equipo</li>
+          <li>Resolución de <strong>merge conflicts</strong></li>
+          <li>Integración con <strong>GitHub/GitLab</strong></li>
+          <li>Hooks para <strong>CI/CD</strong> básico</li>
+        </ul>
+      </div>
+      
+      <!-- Verilog -->
+      <div class="skill-item">
+        <div class="skill-header">
+          <img src="/static/images/hardware-icon.png" alt="Verilog" class="skill-icon">
+          <h3>Arquitectura de Computadoras</h3>
+        </div>
+        <ul class="skill-details">
+          <li>Diseño digital con <strong>Verilog</strong></li>
+          <li>Simulación en <strong>Xilinx ISE</strong></li>
+          <li>Implementación de <strong>ALU básica</strong></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+ 
+   <!--
+    <section id="contacto" class="section">
+        <h2>Contacto</h2>
+        <form id="contacto-form" class="contacto-form">
+            <div class="form-group">
+                <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
+            </div>
+            <div class="form-group">
+                <input type="email" id="email" name="email" required placeholder="Tu email">
+            </div>
+            <div class="form-group">
+                <textarea id="mensaje" name="mensaje" required placeholder="Tu mensaje"></textarea>
+            </div>
+            <button type="submit" class="btn">Enviar Mensaje</button>
+        </form>
+    </section>  -->
+    <form 
+  action="https://formsubmit.co/hernandez0mariana0@gmail.com" 
+  method="POST"
+  class="contacto-form"
+>
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_next" value="https://tudominio.github.io/gracias.html">
+  
+  <div class="form-group">
+    <input type="text" name="nombre" required placeholder="Tu nombre">
+  </div>
+  <div class="form-group">
+    <input type="email" name="email" required placeholder="Tu email">
+  </div>
+  <div class="form-group">
+    <textarea name="mensaje" required placeholder="Tu mensaje"></textarea>
+  </div>
+  <button type="submit" class="btn">Enviar Mensaje</button>
+</form>
+
+    <footer>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+        <p>&copy; <span id="year"></span> [Tu Nombre]. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="static/js/script.js"></script>
+</body>
+</html>
