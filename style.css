@@ -1,0 +1,186 @@
+/* ===== Estilos personalizados con paleta Durazno y Azul Suave ===== */
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #FDF0ED; /* Fondo cálido suave */
+    color: #2B2D42;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+    background-color: #BFD7EA !important; /* Azul pastel */
+}
+.navbar .nav-link {
+    color: #2B2D42 !important;
+    font-weight: 500;
+}
+.navbar .nav-link:hover {
+    color: #FFB4A2 !important; /* Coral suave */
+}
+.navbar-brand {
+    color: #2B2D42 !important;
+    font-weight: 700;
+}
+
+/* ===== Hero ===== */
+.hero {
+    background: linear-gradient(135deg, #f3d2c0, #fdad87);
+    color: #2B2D42;
+    padding: 8rem 0;
+    text-align: center;
+}
+.hero-img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #FFB4A2;
+}
+.hero h1 {
+    font-weight: 700;
+}
+.hero p {
+    font-size: 1.2rem;
+    color: #2B2D42;
+}
+
+/* ===== Títulos ===== */
+.section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-weight: 700;
+    color: #2B2D42;
+}
+
+/* ===== Cards ===== */
+.card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(191, 215, 234, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(255, 180, 162, 0.4);
+}
+.card-title {
+    color: #2B2D42;
+}
+.card-text {
+    color: #555;
+}
+
+/* ===== Badges ===== */
+.badge-custom {
+    background-color: #FFCDB2;
+    color: #2B2D42;
+    font-weight: 500;
+    padding: 0.4em 0.8em;
+    margin: 0.2em;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+/* ===== Timeline ===== */
+.timeline {
+    position: relative;
+    padding-left: 30px;
+    border-left: 2px solid #BFD7EA;
+}
+.timeline-item {
+    position: relative;
+    margin-bottom: 2rem;
+}
+.timeline-item:before {
+    content: '';
+    position: absolute;
+    left: -38px;
+    top: 5px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #ffb0e1;
+    border: 2px solid #FDF0ED;
+}
+.timeline-item h5 {
+    color: #2B2D42;
+}
+.timeline-item p {
+    color: #444;
+}
+
+/* ===== Botones ===== */
+.btn-primary {
+    background-color: #FFB4A2;
+    border-color: #FFB4A2;
+    color: #2B2D42;
+    font-weight: 600;
+    border-radius: 10px;
+}
+.btn-primary:hover {
+    background-color: #FFCDB2;
+    border-color: #FFCDB2;
+    color: #2B2D42;
+}
+.btn-outline-dark {
+    color: #2B2D42;
+    border-color: #BFD7EA;
+}
+.btn-outline-dark:hover {
+    background-color: #BFD7EA;
+    color: #2B2D42;
+}
+
+/* ===== Accordion ===== */
+.accordion-button {
+    background-color: #FDF0ED;
+    color: #2B2D42;
+    font-weight: 500;
+}
+.accordion-button:not(.collapsed) {
+    color: #2B2D42;
+    background-color: #FFCDB2;
+}
+.accordion-body {
+    background-color: #FFF8F6;
+}
+
+/* ===== Social Icons ===== */
+.social-icons a {
+    font-size: 1.5rem;
+    color: #2B2D42;
+    margin: 0 10px;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+.social-icons a:hover {
+    color: #FFB4A2;
+    transform: scale(1.1);
+}
+
+/* ===== Footer ===== */
+footer {
+    background-color: #BFD7EA;
+    color: #2B2D42;
+    padding: 2rem 0;
+    text-align: center;
+}
+footer p {
+    color: #2B2D42;
+}
+
+/* ===== Animaciones suaves ===== */
+.card, .btn, .timeline-item, .navbar, .accordion-button, .social-icons a {
+    transition: all 0.3s ease;
+}
+
+/* ===== Ajustes responsivos ===== */
+@media (max-width: 768px) {
+    .hero {
+        padding: 6rem 1rem;
+    }
+    .hero-img {
+        width: 150px;
+        height: 150px;
+    }
+}
