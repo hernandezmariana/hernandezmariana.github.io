@@ -3,260 +3,206 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Portafolio Interactivo</title>
-    <link rel="stylesheet" href="static/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Portfolio - [Tu Nombre]</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="logo.png" type="image/x-icon">
+
 </head>
 <body>
-    <header>
-        <nav id="navbar">
-            <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#sobre-mi">Sobre Mí</a></li>
-                <li><a href="#proyectos">Proyectos</a></li>
-                <li><a href="#habilidades">Habilidades</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
-    <section id="inicio" class="hero">
-        <div class="hero-content">
-            <!-- Nombre con tipografía más discreta -->
-            <h1 class="nombre">Mariana Hernández</h1>
-            
-            <!-- Subtítulo profesional -->
-            <p class="subtitulo">Desarrolladora Full Stack | Estudiante de Ingeniería</p>
-            
-            <!-- Información de contacto compacta -->
-            <div class="info-contacto">
-                <span class="ubicacion">📍 Córdoba, Argentina</span>
-                <span class="email">✉️ mariana.hernandez@email.com</span>
-            </div>
-            
-            <!-- Botón discreto -->
-            <a href="#proyectos" class="btn">Ver mis proyectos</a>
-        </div>
-    </section>
 
-    <section id="sobre-mi" class="section">
-        <h2>Sobre Mí</h2>
-        <div class="sobre-mi-content">
-            <div class="sobre-mi-text">
-                <p>Aquí puedes escribir una breve descripción sobre ti, tus intereses y tu enfoque profesional.</p>
-                <div class="acordeon">
-                    <button class="acordeon-btn">Más sobre mí</button>
-                    <div class="acordeon-content">
-                        <p>Información adicional que se mostrará al hacer clic.</p>
+    <div id="app">
+        <!-- Barra de Navegación -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <div class="container">
+                <!-- <a class="navbar-brand" href="#">{{ name }}</a> -->
+                 <a class="navbar-brand" href="#">Mariana Hernandez </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#about">Sobre Mí</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#experience">Experiencia y Estudios</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#herramientas">Herramientas </a></li>
+
+                        <li class="nav-item"><a class="nav-link" href="#projects">Proyectos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Sección Principal (Hero) -->
+        <header class="hero">
+            <div class="container">
+                <img src="yo.jpg" alt="Foto de perfil" class="rounded-circle hero-img mb-4">
+                <!--<h1 class="display-4 fw-bold">{{ name }}</h1> -->
+                <h1 class="display-4 fw-bold">Mariana Hernandez</h1>
+                <!-- <p class="lead">{{ headline }}</p> -->
+                 <p class="lead">Estudiante de Ingeniería en Computación</p>
+                <div class="social-icons mt-4">
+                    <a :href="social.github" target="_blank" title="GitHub"><i class="bi bi-github"></i></a>
+                    <a :href="social.linkedin" target="_blank" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <!-- Sobre Mí -->
+            <section id="about" class="py-5">
+                <div class="container">
+                    <h2 class="section-title">Sobre Mí</h2>
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8 text-center">
+                         <!--<p class="lead">{{ about.description }}</p>-->
+                             <p class="lead"> Soy un estudiante apasionado por la tecnología, con un fuerte interés en el desarrollo de software y la resolución de problemas complejos. Busco oportunidades para aplicar mis conocimientos y seguir aprendiendo en un entorno profesional. </p>
+                            <ul class="list-inline my-4">
+                                <!-- <li class="list-inline-item"><i class="bi bi-geo-alt-fill me-2"></i>{{ about.city }}</li>--->
+                                <li class="list-inline-item"><i class="bi bi-geo-alt-fill me-2"></i>Bahia Blanca</li>
+
+                              <!--  <li class="list-inline-item"><i class="bi bi-envelope-fill me-2"></i>{{ about.email }}</li>-->
+                              <li class="list-inline-item"><i class="bi bi-envelope-fill me-2"></i>hernandez0mariana0@gmail.com</li>
+
+                            </ul>
+                            <a :href="about.cv_path" class="btn btn-primary btn-lg" download>
+                                <i class="bi bi-download me-2"></i>Descargar CV
+                            </a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="sobre-mi-img">
-                <img src="static/YO.jpg" alt="Tu foto de perfil">
-            </div>
-        </div>
-    </section>
+            </section>
 
-    <section id="proyectos" class="section">
-        <h2>Mis Proyectos</h2>
-        <div class="filtros">
-            <button class="filtro-btn active" data-filter="todos">Todos</button>
-            <button class="filtro-btn" data-filter="web">Web</button>
-            <button class="filtro-btn" data-filter="python">Python</button>
-            <button class="filtro-btn" data-filter="otros">Otros</button>
-        </div>
-        <div class="proyectos-container" id="proyectos-container">
-            <!-- Los proyectos se cargarán dinámicamente con JavaScript -->
-        </div>
-    </section>
+            <!-- Experiencia y Estudios -->
+            <section id="experience" class="py-5 bg-light">
+                <div class="container">
+                    <h2 class="section-title">Experiencia y Estudios</h2>
+                    <div class="row">
+                        <!-- Experiencia Laboral -->
+                        <div class="col-lg-6 mb-5 mb-lg-0">
+                            <h3 class="mb-4 text-center">Experiencia Laboral</h3>
+                            <div class="timeline">
+                                <div v-for="job in experience" class="timeline-item">
+                                    <h5 class="fw-bold">{{ job.title }}</h5>
+                                    <p class="text-muted mb-1">{{ job.company }} | {{ job.period }}</p>
+                                    <p>{{ job.description }}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Educación y Cursos -->
+                        <div class="col-lg-6">
+                            <h3 class="mb-4 text-center">Educación y Cursos</h3>
+                            <div class="timeline">
+                                <!-- Educación Formal -->
+                                <div v-for="edu in education" class="timeline-item">
+                                    <h5 class="fw-bold"
+                                    >{{ edu.degree }}</h5>
+                                    <p class="text-muted mb-1">{{ edu.institution }} | {{ edu.period }}</p>
+                                    <p>{{ edu.description }}</p>
+                                </div>
+                                <!-- Cursos -->
+                                <div v-for="course in courses" class="timeline-item">
+                                    <h5 class="fw-bold">{{ course.name }}</h5>
+                                    <p class="text-muted mb-1">{{ course.institution }}</p>
+                                
+                                     <!-- Módulos (si existen) -->
+  <ul v-if="course.modules && course.modules.length">
+    <li v-for="(module, index) in course.modules" :key="index">{{ module }}</li>
+  </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-    <section id="habilidades" class="section">
-        <h2>Habilidades</h2>
-        <div class="habilidades-container">
-            <!-- Las habilidades se cargarán dinámicamente -->
-        </div>
-    </section>
+            <!-- Proyectos -->
+            <section id="projects" class="py-5">
+                <div class="container">
+                    <h2 class="section-title">Proyectos</h2>
 
-    <section id="formacion" class="section">
-        <h2>Formación Académica</h2>
-        
-        <div class="timeline">
-            <!-- Educación formal -->
-            <div class="timeline-item">
-                <div class="timeline-date">Presente</div>
-                <div class="timeline-content">
-                    <h3>Estudiante de Ingeniería en Computación</h3>
-                    <p>Universidad Nacional del Sur</p>
+                    <!-- Proyectos Web -->
+                    <h3 class="mb-4">Desarrollo Web</h3>
+                    <div class="row g-4">
+                        <div v-for="project in webProjects" class="col-md-6">
+                            <div class="card">
+                                <img :src="project.image" class="card-img-top" :alt="'Captura de ' + project.title">
+                                <div class="card-body">
+                                    <h5 class="card-title fw-bold">{{ project.title }}</h5>
+                                    <p class="card-text">{{ project.description }}</p>
+                                    <div>
+                                        <span v-for="tech in project.technologies" class="badge-custom">{{ tech }}</span>
+                                    </div>
+                                </div>
+                                <!--
+                                <div class="card-footer bg-white border-top-0">
+                                     <a :href="project.liveUrl" class="btn btn-outline-dark me-2" target="_blank"><i class="bi bi-box-arrow-up-right me-2"></i>Ver Demo</a>
+                                     <a :href="project.repoUrl" class="btn btn-dark" target="_blank"><i class="bi bi-github me-2"></i>Ver Código</a>
+                                </div> 
+                                -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Proyectos Universitarios -->
+                    <h3 class="my-5">Proyectos Universitarios</h3>
+                    <div class="accordion" id="universityProjectsAccordion">
+                        <div v-for="(project, index) in universityProjects" class="accordion-item">
+                            <h2 class="accordion-header" :id="'heading' + index">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" :data-bs-target="'#collapse' + index" aria-expanded="false" :aria-controls="'collapse' + index">
+                                    <strong class="me-2">{{ project.course }}:</strong> {{ project.title }}
+                                </button>
+                            </h2>
+                            <div :id="'collapse' + index" class="accordion-collapse collapse" :aria-labelledby="'heading' + index" data-bs-parent="#universityProjectsAccordion">
+                                <div class="accordion-body">
+                                    <p>{{ project.description }}</p>
+                                    <div class="mt-3">
+                                        <strong>Tecnologías usadas:</strong>
+                                        <span v-for="tech in project.technologies" class="badge-custom">{{ tech }}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- Footer y Contacto -->
+        <footer id="contact" class="py-5">
+            <div class="container text-center">
+                <h2 class="section-title text-white">Contacto</h2>
+                <p>Si te interesa mi perfil, no dudes en contactarme.</p>
+                <p class="lead">
+  <a :href="'mailto:' + about.email" class="text-decoration-none" style="color: inherit;">
+    {{ about.email }}
+  </a>
+</p>
+
+                 <div class="social-icons mt-4">
+                    <a :href="social.github" target="_blank" title="GitHub"><i class="bi bi-github"></i></a>
+                    <a :href="social.linkedin" target="_blank" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
                 </div>
             </div>
-            
-            <div class="timeline-item">
-                <div class="timeline-date">2015 - 2019</div>
-                <div class="timeline-content">
-                    <h3>Bachiller en [Tu Especialidad]</h3>
-                    <p>[Nombre del Colegio/Instituto]</p>
-                </div>
-            </div>
-        </div>
-        
-        <h3 class="cursos-title">Cursos y Certificaciones</h3>
-        
-        <div class="cursos-container">
-            <!-- Cursos técnicos -->
-            <div class="curso-card">
-                <div class="curso-icon">
-                    <i class="fas fa-laptop-code"></i>
-                </div>
-                <div class="curso-info">
-                    <h4>Desarrollo Web Full Stack</h4>
-                    <p>[Plataforma: Udemy/Coursera/etc.] - 2023</p>
-                    <p>120 horas - Certificado disponible</p>
-                </div>
-            </div>
-            
-            <!-- Cursos de inglés -->
-            <div class="curso-card">
-                <div class="curso-icon">
-                    <i class="fas fa-language"></i>
-                </div>
-                <div class="curso-info">
-                    <h4>Inglés Avanzado</h4>
-                    <p>[Instituto: Cultural Inglesa/EF/etc.] - 2022</p>
-                    <p>Nivel C1 - 400 horas</p>
-                </div>
-            </div>
-            
-            <!-- Añade más cursos según necesites -->
-        </div>
-    </section>
-<!-- SECCIÓN HABILIDADES TÉCNICAS -->
-<section id="habilidades">
-    <h2>Habilidades Técnicas</h2>
-  
-    <!-- CATEGORÍA: Tecnologías y Frameworks -->
-    <div class="skill-category">
-      <h3>Tecnologías y Frameworks</h3>
-  
-      <!-- Tarjeta principal de Desarrollo Web -->
-      <div class="skill-item">
-        <div class="skill-header">
-          <img src="/static/images/web-icon.png" alt="Web" class="skill-icon">
-          <h3>Desarrollo Web</h3>
-        </div>
-        
-        <!-- Sub-habilidades agrupadas -->
-        <div class="skill-subitems">
-          
-          <!-- PHP -->
-          <div class="subskill">
-            <h4>PHP</h4>
-            <ul>
-              <li><strong>Tienda Web funcional</strong> con carrito de compras</li>
-              <li>Arquitectura <strong>MVC</strong> personalizada</li>
-              <li>Conexión con <strong>MySQL</strong> para persistencia de datos</li>
-            </ul>
-          </div>
-          
-          <!-- HTML/CSS -->
-          <div class="subskill">
-            <h4>HTML5/CSS3</h4>
-            <ul>
-              <li>Maquetación <strong>responsive</strong> (mobile-first)</li>
-              <li>Implementación de <strong>animaciones CSS</strong></li>
-              <li>Validación W3C y <strong>accesibilidad</strong> (ARIA)</li>
-            </ul>
-          </div>
-          
-          <!-- Bootstrap -->
-          <div class="subskill">
-            <h4>Bootstrap 5</h4>
-            <ul>
-              <li>Desarrollo rápido con <strong>grid system</strong></li>
-              <li>Customización de <strong>variables SASS</strong></li>
-              <li>Integración con <strong>JavaScript</strong> para componentes dinámicos</li>
-            </ul>
-          </div>
-        </div>
-      </div>
+        </footer>
+
     </div>
-  
-    <!-- CATEGORÍA: Herramientas y Otros -->
-    <div class="skill-category">
-      <h3>Herramientas y Otros</h3>
-      
-      <!-- Git -->
-      <div class="skill-item">
-        <div class="skill-header">
-          <img src="/static/images/git-icon.png" alt="Git" class="skill-icon">
-          <h3>Control de Versiones</h3>
-        </div>
-        <ul class="skill-details">
-          <li><strong>Git Flow</strong> para trabajo en equipo</li>
-          <li>Resolución de <strong>merge conflicts</strong></li>
-          <li>Integración con <strong>GitHub/GitLab</strong></li>
-          <li>Hooks para <strong>CI/CD</strong> básico</li>
-        </ul>
-      </div>
-      
-      <!-- Verilog -->
-      <div class="skill-item">
-        <div class="skill-header">
-          <img src="/static/images/hardware-icon.png" alt="Verilog" class="skill-icon">
-          <h3>Arquitectura de Computadoras</h3>
-        </div>
-        <ul class="skill-details">
-          <li>Diseño digital con <strong>Verilog</strong></li>
-          <li>Simulación en <strong>Xilinx ISE</strong></li>
-          <li>Implementación de <strong>ALU básica</strong></li>
-        </ul>
-      </div>
-    </div>
-  </section>
- 
-   <!--
-    <section id="contacto" class="section">
-        <h2>Contacto</h2>
-        <form id="contacto-form" class="contacto-form">
-            <div class="form-group">
-                <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
-            </div>
-            <div class="form-group">
-                <input type="email" id="email" name="email" required placeholder="Tu email">
-            </div>
-            <div class="form-group">
-                <textarea id="mensaje" name="mensaje" required placeholder="Tu mensaje"></textarea>
-            </div>
-            <button type="submit" class="btn">Enviar Mensaje</button>
-        </form>
-    </section>  -->
-    <form 
-  action="https://formsubmit.co/hernandez0mariana0@gmail.com" 
-  method="POST"
-  class="contacto-form"
->
-  <input type="hidden" name="_captcha" value="false">
-  <input type="hidden" name="_next" value="https://tudominio.github.io/gracias.html">
-  
-  <div class="form-group">
-    <input type="text" name="nombre" required placeholder="Tu nombre">
-  </div>
-  <div class="form-group">
-    <input type="email" name="email" required placeholder="Tu email">
-  </div>
-  <div class="form-group">
-    <textarea name="mensaje" required placeholder="Tu mensaje"></textarea>
-  </div>
-  <button type="submit" class="btn">Enviar Mensaje</button>
-</form>
 
-    <footer>
-        <div class="social-links">
-            <a href="#"><i class="fab fa-github"></i></a>
-            <a href="#"><i class="fab fa-linkedin"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-        </div>
-        <p>&copy; <span id="year"></span> [Tu Nombre]. Todos los derechos reservados.</p>
-    </footer>
+    <!-- Vue.js -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom Script -->
+    <script src="script.js"></script>
 
-    <script src="static/js/script.js"></script>
 </body>
 </html>
