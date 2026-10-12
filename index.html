@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - [Tu Nombre]</title>
+    <title>Portfolio - Mariana Hernandez</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <!-- Google Fonts: Poppins -->
+    <!-- Google Fonts: Poppins + JetBrains Mono (para la consola) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="logo.png" >
+    <link rel="icon" href="logo.png" type="image/x-icon">
 
 </head>
 <body>
@@ -23,19 +23,17 @@
         <!-- Barra de Navegación -->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
             <div class="container">
-                <!-- <a class="navbar-brand" href="#">{{ name }}</a> -->
-                 <a class="navbar-brand" href="#">Mariana Hernandez </a>
+                <a class="navbar-brand" href="#">Mariana Hernandez</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item"><a class="nav-link" href="#about">Sobre Mí</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#terminal-section">Consola</a></li>
                         <li class="nav-item"><a class="nav-link" href="#experience">Experiencia y Estudios</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#herramientas">Herramientas </a></li>
-
                         <li class="nav-item"><a class="nav-link" href="#projects">Proyectos</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Contacto</a></li>
                     </ul>
                 </div>
             </div>
@@ -45,10 +43,8 @@
         <header class="hero">
             <div class="container">
                 <img src="yo.jpg" alt="Foto de perfil" class="rounded-circle hero-img mb-4">
-                <!--<h1 class="display-4 fw-bold">{{ name }}</h1> -->
                 <h1 class="display-4 fw-bold">Mariana Hernandez</h1>
-                <!-- <p class="lead">{{ headline }}</p> -->
-                 <p class="lead">Estudiante de Ingeniería en Computación</p>
+                <p class="lead">Estudiante de Ingeniería en Computación</p>
                 <div class="social-icons mt-4">
                     <a :href="social.github" target="_blank" title="GitHub"><i class="bi bi-github"></i></a>
                     <a :href="social.linkedin" target="_blank" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
@@ -63,15 +59,10 @@
                     <h2 class="section-title">Sobre Mí</h2>
                     <div class="row justify-content-center">
                         <div class="col-lg-8 text-center">
-                         <!--<p class="lead">{{ about.description }}</p>-->
-                             <p class="lead"> Soy un estudiante apasionado por la tecnología, con un fuerte interés en el desarrollo de software y la resolución de problemas complejos. Busco oportunidades para aplicar mis conocimientos y seguir aprendiendo en un entorno profesional. </p>
+                            <p class="lead"> Soy un estudiante apasionado por la tecnología, con un fuerte interés en el desarrollo de software y la resolución de problemas complejos. Busco oportunidades para aplicar mis conocimientos y seguir aprendiendo en un entorno profesional. </p>
                             <ul class="list-inline my-4">
-                                <!-- <li class="list-inline-item"><i class="bi bi-geo-alt-fill me-2"></i>{{ about.city }}</li>--->
-                                <li class="list-inline-item"><i class="bi bi-geo-alt-fill me-2"></i>Bahia Blanca</li>
-
-                              <!--  <li class="list-inline-item"><i class="bi bi-envelope-fill me-2"></i>{{ about.email }}</li>-->
-                              <li class="list-inline-item"><i class="bi bi-envelope-fill me-2"></i>hernandez0mariana0@gmail.com</li>
-
+                                <li class="list-inline-item"><i class="bi bi-geo-alt-fill me-2"></i>Bahía Blanca, Argentina</li>
+                                <li class="list-inline-item"><i class="bi bi-envelope-fill me-2"></i>hernandez0mariana0@gmail.com</li>
                             </ul>
                             <a :href="about.cv_path" class="btn btn-primary btn-lg" download>
                                 <i class="bi bi-download me-2"></i>Descargar CV
@@ -80,6 +71,79 @@
                     </div>
                 </div>
             </section>
+
+            <!-- ===================================================
+                 CONSOLA (de OP2) + EASTER EGG DE BOCA
+            ==================================================== -->
+           <!-- <section id="terminal-section" class="py-5">
+                <div class="container">
+
+                    <div class="terminal-intro">
+                        <h2 class="section-title text-white">Consola</h2>
+                        <p class="terminal-lead">
+                            Esta parte no reemplaza mi portfolio profesional.
+                            Es una pequeña ventana a las cosas que también forman parte de mí.
+                        </p>
+
+                        <div class="personality-buttons">
+                            <button class="easter-button" @click="activateBoca">
+                                ⚽ Modo hincha
+                            </button>
+                            <span class="hint">
+                                <i class="bi bi-terminal"></i>
+                                También podés escribir <strong>help</strong>.
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="terminal-window" id="terminal">
+
+                        <div class="terminal-header">
+                            <div class="window-controls">
+                                <span class="red"></span>
+                                <span class="yellow"></span>
+                                <span class="green"></span>
+                            </div>
+                            <div class="terminal-title">mariana@portfolio:~</div>
+                            <div class="terminal-status">● online</div>
+                        </div>
+
+                        <div class="terminal-body" @click="focusTerminal">
+                            <div class="terminal-output" ref="terminalOutput">
+
+                                <div class="terminal-line terminal-muted">Bienvenida a mi consola.</div>
+                                <div class="terminal-line terminal-muted">Escribí <strong>help</strong> o elegí una opción:</div>
+
+                                <div class="terminal-menu">
+                                    <button
+                                        v-for="item in terminalMenu"
+                                        :key="item.id"
+                                        @click.stop="runTerminalCommand(String(item.id))"
+                                    >
+                                        <span>{{ String(item.id).padStart(2, '0') }}</span>
+                                        {{ item.label }}
+                                    </button>
+                                </div>
+
+                                <div class="terminal-line terminal-prompt">
+                                    <span class="terminal-green">guest@mariana-h:~$</span>
+                                    <input
+                                        ref="terminalInput"
+                                        v-model="terminalInput"
+                                        @keydown.enter="submitTerminal"
+                                        autocomplete="off"
+                                        spellcheck="false"
+                                    >
+                                    <span class="cursor"></span>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </section> -->
 
             <!-- Experiencia y Estudios -->
             <section id="experience" class="py-5 bg-light">
@@ -103,8 +167,7 @@
                             <div class="timeline">
                                 <!-- Educación Formal -->
                                 <div v-for="edu in education" class="timeline-item">
-                                    <h5 class="fw-bold"
-                                    >{{ edu.degree }}</h5>
+                                    <h5 class="fw-bold">{{ edu.degree }}</h5>
                                     <p class="text-muted mb-1">{{ edu.institution }} | {{ edu.period }}</p>
                                     <p>{{ edu.description }}</p>
                                 </div>
@@ -112,11 +175,11 @@
                                 <div v-for="course in courses" class="timeline-item">
                                     <h5 class="fw-bold">{{ course.name }}</h5>
                                     <p class="text-muted mb-1">{{ course.institution }}</p>
-                                
-                                     <!-- Módulos (si existen) -->
-  <ul v-if="course.modules && course.modules.length">
-    <li v-for="(module, index) in course.modules" :key="index">{{ module }}</li>
-  </ul>
+
+                                    <!-- Módulos (si existen) -->
+                                    <ul v-if="course.modules && course.modules.length">
+                                        <li v-for="(module, index) in course.modules" :key="index">{{ module }}</li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -142,12 +205,6 @@
                                         <span v-for="tech in project.technologies" class="badge-custom">{{ tech }}</span>
                                     </div>
                                 </div>
-                                <!--
-                                <div class="card-footer bg-white border-top-0">
-                                     <a :href="project.liveUrl" class="btn btn-outline-dark me-2" target="_blank"><i class="bi bi-box-arrow-up-right me-2"></i>Ver Demo</a>
-                                     <a :href="project.repoUrl" class="btn btn-dark" target="_blank"><i class="bi bi-github me-2"></i>Ver Código</a>
-                                </div> 
-                                -->
                             </div>
                         </div>
                     </div>
@@ -183,17 +240,33 @@
                 <h2 class="section-title text-white">Contacto</h2>
                 <p>Si te interesa mi perfil, no dudes en contactarme.</p>
                 <p class="lead">
-  <a :href="'mailto:' + about.email" class="text-decoration-none" style="color: inherit;">
-    {{ about.email }}
-  </a>
-</p>
+                    <a :href="'mailto:' + about.email" class="text-decoration-none" style="color: inherit;">
+                        {{ about.email }}
+                    </a>
+                </p>
 
-                 <div class="social-icons mt-4">
+                <div class="social-icons mt-4">
                     <a :href="social.github" target="_blank" title="GitHub"><i class="bi bi-github"></i></a>
                     <a :href="social.linkedin" target="_blank" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
                 </div>
             </div>
         </footer>
+
+        <!-- ===================================================
+             EASTER EGG: MODO HINCHA (BOCA)
+        ==================================================== -->
+        <transition name="boca-fade">
+            <div v-if="bocaActive" class="boca-easter">
+                <div class="boca-paper-texture"></div>
+                <div class="boca-flash"></div>
+                <div class="boca-content">
+                    <div class="boca-ball">⚽</div>
+                    <p>modo hincha activado</p>
+                    <strong>BOQUITA</strong>
+                    <small>volviendo al portfolio...</small>
+                </div>
+            </div>
+        </transition>
 
     </div>
 
@@ -204,5 +277,13 @@
     <!-- Custom Script -->
     <script src="script.js"></script>
 
+
+<div class="arcade-footer">
+  <p class="instrucciones-juego">Modo Debug: Presiona ESPACIO para esquivar los Bugs</p>
+  <!-- Le damos un ancho de 800 y alto de 250 para que el personaje entre bien -->
+  <canvas id="miJuego" width="800" height="250"></canvas>
+</div>
+
+    
 </body>
 </html>
