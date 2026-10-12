@@ -8,13 +8,13 @@ createApp({
             headline: 'Estudiante de Ingeniería en Computación',
             social: {
                 github: 'https://github.com/hernandezmariana',
-                linkedin: 'https://linkedin.com/in/tu-usuario'
+                linkedin: 'https://linkedin.com/in/marianah119'
             },
             about: {
                 description: 'Soy un estudiante apasionado por la tecnología, con un fuerte interés en el desarrollo de software y la resolución de problemas complejos. Busco oportunidades para aplicar mis conocimientos y seguir aprendiendo en un entorno profesional.',
                 city: 'Bahía Blanca, Argentina',
                 email: 'hernandez0mariana0@gmail.com',
-                cv_path: './CV_TuNombre.pdf' // Asegúrate de que tu CV esté en la misma carpeta
+                cv_path: './CV HERNANDEZ MARIANA .pdf' // 
             },
             experience: [
                 {
