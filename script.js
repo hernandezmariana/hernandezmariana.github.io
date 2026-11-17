@@ -20,7 +20,7 @@ createApp({
                 {
                     title: 'Mantenimiento y soporte técnico',
                     company: 'Kleppe S.A',
-                    period: '2024 - 2025',
+                    period: '2024 - 2025- 2026',
                     description: 'Tareas de mantenimiento de PC, instalación de SO y software. Soporte presencial y remoto para empleados'
                 },
                 {
